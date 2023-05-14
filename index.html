@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-3W0tnxTlTmT0r/Op8rIJW+L+k/ytqxzTZyQ0E8XN/7OMtKYfKcwhG2U5SdU5BzU39l6f5V7oI4c4u1zgprnn6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
-  </head>
-  <body>
-    <header>
-      <h1>My Personal Website</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="about">
-        <h2>Thông tin</h2>
-        <p>Hi, Tôi tên là Chí</p>
-      </section>
-      <section id="work">
-        <h2>My Work</h2>
-        <ul>
-          <li>
-            <h3>Project 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </li>
-          <li>
-            <h3>Project 2</h3>
-            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </li>
-        </ul>
-      </section>
-      <section id="contact">
-        <h2>Liên hệ tôi</h2>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-          </div>          
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </main>
-  </body>
+<head>
+	<title>Trái tim nâng cao</title>
+	<style>
+		.heart {
+			position: relative;
+			width: 200px;
+			height: 180px;
+			margin: 50px auto;
+			background-color: #ff6b6b;
+			transform: rotate(-45deg);
+			box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+			transition: transform 0.2s ease-in-out;
+			cursor: pointer;
+		}
+		.heart:hover {
+			transform: rotate(-50deg);
+			box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+		}
+		.heart:before,
+		.heart:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50px;
+			width: 50px;
+			height: 80px;
+			background-color: #ff6b6b;
+			border-radius: 50px 50px 0 0;
+			transform: rotate(-45deg);
+		}
+		.heart:after {
+			left: 0;
+			transform: rotate(45deg);
+		}
+		.heart .text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 2em;
+			color: #fff;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+			transition: opacity 0.2s ease-in-out;
+			opacity: 0;
+		}
+		.heart:hover .text {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="heart">
+		<div class="text">Yêu</div>
+	</div>
+</body>
 </html>
